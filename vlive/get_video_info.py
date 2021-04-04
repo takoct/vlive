@@ -16,7 +16,7 @@ def get_vod_id(url):
     return vod_id
 def get_key(url):
     video_seq = get_video_seq(url)
-    get_key_api_url = "https://www.vlive.tv/globalv-web/vam-web/video/v1.0/vod/{}/inkey?appId={}".format(video_seq,APP_ID)
+    get_key_api_url = "https://www.vlive.tv/globalv-web/vam-web/video/v1.0/vod/{}/inkey?appId={}&platformType=PC".format(video_seq,APP_ID)
     key = get_json(get_key_api_url)["inkey"]
     return key
 def get_video_url(url):
